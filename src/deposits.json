@@ -1,0 +1,58 @@
+{
+  "active": [
+    {
+      "id": 1,
+      "city": "Nahāvand",
+      "street": "Prairie Rose",
+      "rent": 1960,
+      "account": 1391,
+      "type": "Chevrolet",
+      "message": "Assistant Manager",
+      "level": 3,
+      "date": "3/16/2020"
+    }, {
+      "id": 2,
+      "city": "Araraquara",
+      "street": "Thierer",
+      "rent": 2003,
+      "account": 3489,
+      "type": "Jaguar",
+      "message": "VP Accounting",
+      "level": 1,
+      "date": "2/14/2020"
+    }
+  ],
+  "closed": [
+    {
+      "id": 4,
+      "city": "Zubin Potok",
+      "street": "Shelley",
+      "rent": 2010,
+      "account": 1113,
+      "type": "BMW",
+      "message": "Biostatistician III",
+      "level": 1,
+      "date": "8/20/2019"
+    }, {
+      "id": 5,
+      "city": "Tân Việt",
+      "street": "Meadow Vale",
+      "rent": 2004,
+      "account": 3365,
+      "type": "Mitsubishi",
+      "message": "Actuary",
+      "level": 3,
+      "date": "9/22/2019"
+    }, {
+      "id": 6,
+      "city": "Lębork",
+      "street": "Marcy",
+      "rent": 2012,
+      "account": 1026,
+      "type": "Chevrolet",
+      "message": "Account Executive",
+      "level": 2,
+      "date": "11/11/2019"
+    }
+  ]
+}
