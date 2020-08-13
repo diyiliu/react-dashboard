@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
 import Nav from "./Nav";
-import Toolbar from "./toolbar/Toolbar";
-import Deposits from "./deposit/Deposits";
-import DepositData from '../../deposits.json'
+import {
+    Switch,
+    Route,
+} from "react-router-dom";
+import Dashboard from "../../pages/Dashboard";
+import Home from "../../pages/Home";
 
 const Container = styled.div`
   width: auto;
@@ -11,19 +14,14 @@ const Container = styled.div`
   position: relative;
 `
 
-const Content = styled.div`
-  padding: 0 4rem;
-`
-
 const Main = () => {
     return (
         <Container>
             <Nav/>
-            <Toolbar />
-            <Content>
-                <Deposits title="active deposits" count="2" data={DepositData.active} />
-                <Deposits title="closed deposits" count="8"  data={DepositData.closed} />
-            </Content>
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/dashboard" component={Dashboard}/>
+            </Switch>
         </Container>
     );
 };

@@ -1,18 +1,28 @@
 import React from 'react';
 import styled from "styled-components";
+import {NavLink} from "react-router-dom";
 
 const Container = styled.div`
-  border-left: 3px solid ${props => props.active ? props.theme.activeMenu : "transparent"};
-  width: 100%;
-  padding: 0.3rem 0 0.3rem 2rem;
-  cursor: pointer;
   margin-bottom: 1rem;
   transition: all 0.2s ease-in-out;
-  display: flex;
-  align-items: center;
-  color: ${props => props.active ? props.theme.activeMenu : "#AAA5A5"};
   
   &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  a {
+    width: 100%;
+    padding: 0.3rem 0 0.3rem 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #AAA5A5;
+    border-left: 3px solid transparent;
+  }
+  
+  .selected {
+    color: ${props => props.theme.activeMenu};
+    border-left: 3px solid ${props => props.theme.activeMenu};
     background: rgba(0, 0, 0, 0.1);
   }
 `
@@ -27,12 +37,14 @@ const Title = styled.h1`
   font-weight: 400;
 `
 
-const MenuItem = ({active, title, icon}) => {
+const MenuItem = ({title, icon, link}) => {
 
     return (
-        <Container active={active}>
-            <Icon className="iconify" data-inline="false" data-icon={`mdi-light:${icon}`}/>
-            <Title>{title}</Title>
+        <Container>
+            <NavLink exact to={link} activeClassName="selected">
+                <Icon className="iconify" data-inline="false" data-icon={`mdi-light:${icon}`}/>
+                <Title>{title}</Title>
+            </NavLink>
         </Container>
     );
 };
